@@ -66,6 +66,8 @@ while game:#игра идет
             game = False
         
     if not stop:
+        raketka.update_l()
+        raketka2.update_r()
         window.blit(background, (0, 0))
         raketka.reset(window)
         raketka2.reset(window)
