@@ -68,6 +68,8 @@ while game:#игра идет
     if not stop:
         raketka.update_l()
         raketka2.update_r()
+        if sprite.collide_rect(mach, raketka) or sprite.collide_rect(mach, raketka2):
+            mach.skorost_x *= -1
         window.blit(background, (0, 0))
         raketka.reset(window)
         raketka2.reset(window)
